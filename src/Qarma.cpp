@@ -785,7 +785,7 @@ char Qarma::showList(const QStringList& args)
     tw->setRootIsDecorated(false);
     tw->setAllColumnsShowFocus(true);
 
-    bool editable(false), checkable(false), exclusive(false), icons(false), ok;
+    bool editable(false), checkable(false), exclusive(false), icons(false), mid_search(false), ok;
     QStringList columns;
     QStringList values;
     QList<int> hiddenCols;
@@ -799,6 +799,9 @@ char Qarma::showList(const QStringList& args)
             columns << NEXT_ARG;
         } else if (args.at(i) == "--editable") {
             editable = true;
+        } else if (args.at(i) == "--mid-search") {
+            // TODO: implement this
+            mid_search = true;
         } else if (args.at(i) == "--hide-header") {
             tw->setHeaderHidden(true);
         } else if (args.at(i) == "--separator") {
