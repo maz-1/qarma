@@ -30,4 +30,5 @@ set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "${PROJECT_TARGET_N
 
 if(UNIX AND NOT APPLE)
     target_link_libraries(${PROJECT_NAME} PRIVATE X11)
+    target_compile_definitions(${PROJECT_NAME} PRIVATE QARMA_X11EXTRA)
 endif()

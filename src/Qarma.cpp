@@ -802,6 +802,7 @@ char Qarma::showList(const QStringList& args)
         } else if (args.at(i) == "--mid-search") {
             // TODO: implement this
             mid_search = true;
+            qWarning("TODO: --mid-search");
         } else if (args.at(i) == "--hide-header") {
             tw->setHeaderHidden(true);
         } else if (args.at(i) == "--separator") {
